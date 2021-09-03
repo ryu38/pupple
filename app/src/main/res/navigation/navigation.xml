@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/swipeFragment">
+
+    <fragment
+        android:id="@+id/swipeFragment"
+        android:name="com.doryan.pupple.ui.swipe.SwipeFragment"
+        android:label="Find fav puppies" >
+        <action
+            android:id="@+id/action_swipeFragment_to_favFragment"
+            app:destination="@id/favFragment"
+            app:popUpTo="@id/swipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favFragment"
+        android:name="com.doryan.pupple.ui.fav.FavFragment"
+        android:label="Chats" />
+</navigation>
