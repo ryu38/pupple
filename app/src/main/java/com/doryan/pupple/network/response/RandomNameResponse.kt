@@ -10,7 +10,7 @@ data class RandomNameResponse(
         val name: RandomNameProperty
     )
 
-    val property: RandomNameProperty = _results[0].name
+    val properties: List<RandomNameProperty> = _results.map { it.name }
 }
 
 data class RandomNameProperty(
